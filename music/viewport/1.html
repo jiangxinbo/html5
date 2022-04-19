@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通用配置 */
+        
+        * {
+            /* box-sizing: 属性定义如何计算一个元素的总宽度和总高度，主要设置是否需要加上内边距(padding)和边框等 */
+            /*  content-box:默认属性(高度和宽度只应用于元素的内容) 设置div宽高=300,padding:10px,border:10px,div实际高度会变成300+20*2+10*2 */
+            /*  border-box: (高度和宽度应用于元素的所有部分: 内容、内边距和边框,注:不包含 margin) 设置padding和border后div实际宽和高度不变 */
+            /*  inherit:指定 box-sizing 属性的值，应该从父元素继承  */
+            box-sizing: border-box;
+        }
+        
+        div.container {
+            width: 100%;
+            border: 2px solid black;
+        }
+        
+        div.box {
+            box-sizing: border-box;
+            width: 50%;
+            border: 5px solid red;
+            float: left;
+        }
+        
+        #example1 {
+            box-sizing: content-box;
+            width: 300px;
+            padding: 40px;
+            border: 15px solid blue;
+        }
+        
+        #example2 {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            这个 div 占据了左边部分234234234234222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+        </div>
+        <div class="box">
+            这个 div 占据了右边部分11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div id="example1">div 的完整宽度为 300px, 不需要考虑内边距和边框。</div>
+    <br>
+    <div id="example2">这个 div 的完整宽度也是 300px, 也不需要考虑内边距和边框。</div>
+</body>
+
+</html>
