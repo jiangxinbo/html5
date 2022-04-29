@@ -1,0 +1,28 @@
+* {
+    /* 元素的总宽度和高度中包括内边距和边框 */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: burlywood;
+}
+
+div {
+    border-width: 1px 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+    overflow: auto;
+}
+
+div.top {
+    margin-top: 5px;
+}
+
+img.img1 {
+    width: 100px;
+    height: 100px;
+}
+
+img.float-left {
+    float: left;
+}

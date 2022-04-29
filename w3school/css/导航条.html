@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航条</title>
+    <style>
+        * {
+            /* 元素的总宽度和高度中包括内边距和边框 */
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: burlywood;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+            /* border: 1px red solid; */
+        }
+        
+        li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #111;
+        }
+        
+        .buju div {
+            float: left;
+            width: 33.333%;
+            border: 1px solid #111;
+            padding: 50px;
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .bg-yellow {
+            background-color: yellow;
+        }
+        
+        .d1 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#home" class="active">文件</a></li>
+        <li><a>编辑</a></li>
+        <li><a>选择</a></li>
+        <li><a>查看</a></li>
+    </ul>
+    <hr>
+
+    <div class="buju clearfix">
+        <div>
+            zuo,请注意，我们还用了 clearfix hack 来处理布局流，并添加了 box-sizing 属性，以确保框不会由于额外的内边距（填充）而损坏。尝试删除此代码以查看效果。
+        </div>
+        <div>zhong,请注意，我们还用了 clearfix hack 来处理布局流，并添加了 box-sizing 属性，以确保框不会由于额外的内边距（填充）而损坏。尝试删除此代码以查看效果。</div>
+        <div>you,请注意，我们还用了 clearfix hack 来处理布局流，并添加了 box-sizing 属性，以确保框不会由于额外的内边距（填充）而损坏。尝试删除此代码以查看效果。</div>
+        <div style="clear: both;">2行左边</div>
+    </div>
+    <div>
+        <div>
+            aaaa
+            <div class="bg-yellow d1">bbb</div>ccc
+            <div class="bg-yellow d1">444</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
